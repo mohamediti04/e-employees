@@ -67,7 +67,7 @@ $ListeEmployees = isset($_SESSION['employees']) ? $_SESSION['employees'] : [];
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Liste Employees</h2>
-						<table class="table" >
+						<table class="table"  id="color" >
 							<tr>
 								<th>ID</th>
 								<th>Matricule</th>
@@ -75,6 +75,7 @@ $ListeEmployees = isset($_SESSION['employees']) ? $_SESSION['employees'] : [];
 								<th>Prenom</th>
 								<th>Grade</th>
 								<th>Detail Service</th>
+								<th>Grivest Oui/Non<th>
 
 
 							</tr>
@@ -103,6 +104,9 @@ $ListeEmployees = isset($_SESSION['employees']) ? $_SESSION['employees'] : [];
 								<td>
 									<button class="btn btn-success">Voir Detail </button>
 								<td>
+									<td>
+										<input type="checkbox" id="<?=$employee->getID(); ?>" value="<?=$employee->getID(); ?>"  />
+							</td>
 
 							</tr>
 							<?php
@@ -117,11 +121,11 @@ $ListeEmployees = isset($_SESSION['employees']) ? $_SESSION['employees'] : [];
 						<?php  ?>
 						
 						
-						
+					</table>
 						
 						
 					</div>
-					
+					<input type="button" id="btnClick" value="Get" />
 				</div>
 			</div>
 		</div>
@@ -132,7 +136,7 @@ $ListeEmployees = isset($_SESSION['employees']) ? $_SESSION['employees'] : [];
 	?>
 	
 
-  
+
     <script src="Ressources/js/jquery.js"></script>
 	<script src="Ressources/js/bootstrap.min.js"></script>
 	<script src="Ressources/js/jquery.scrollUp.min.js"></script>
